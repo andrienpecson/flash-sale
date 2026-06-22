@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "noEmit": true,
+    // Widen rootDir from the base config's "src" so tests (outside src) are allowed;
+    // this config only typechecks (noEmit), so nothing is written to dist.
+    "rootDir": ".",
+    "types": ["node", "vitest/globals"]
+  },
+  "include": ["src/**/*", "tests/**/*"]
+}
